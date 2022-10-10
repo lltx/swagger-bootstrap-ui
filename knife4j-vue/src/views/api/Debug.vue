@@ -281,7 +281,7 @@ export default {
       enableRequestCache: false,
       // 是否动态参数
       enableDynamicParameter: false,
-      enableHost: false,
+      enableHost: true,
       enableHostText: '',
       authorizeQueryParameters: [],
       headerColumn: [],
@@ -2480,6 +2480,7 @@ export default {
         }
         var baseUrl = '';
         // 是否启用Host
+
         if (this.enableHost) {
           baseUrl = this.enableHostText;
         }
@@ -2487,7 +2488,7 @@ export default {
         var applyReuqest = this.applyRequestParams(formParams, methodType);
         // console.log(applyReuqest)
         var requestConfig = {
-          baseURL: baseUrl,
+          baseURL: this.swaggerInstance.host,
           url: this.debugCheckUrl(url),
           method: methodType,
           headers: headers,
@@ -2591,7 +2592,7 @@ export default {
           baseUrl = this.enableHostText;
         }
         var requestConfig = {
-          baseURL: baseUrl,
+          baseURL: this.swaggerInstance.host,
           url: this.debugCheckUrl(url),
           method: methodType,
           headers: headers,
@@ -2688,7 +2689,7 @@ export default {
           baseUrl = this.enableHostText;
         }
         var requestConfig = {
-          baseURL: baseUrl,
+          baseURL: this.swaggerInstance.host,
           url: this.debugCheckUrl(url),
           method: methodType,
           headers: headers,

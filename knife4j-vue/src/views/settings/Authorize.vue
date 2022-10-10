@@ -212,6 +212,7 @@ export default {
           "grant_type": "password",
           "username": this.oauth.username,
           "password": this.oauth.password,
+          "scope": 'server',
         }
         var requestConfig = {
           url: this.oauth.tokenUrl,

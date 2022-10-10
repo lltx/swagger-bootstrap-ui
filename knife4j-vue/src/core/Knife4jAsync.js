@@ -71,7 +71,7 @@ marked.setOptions({
 function SwaggerBootstrapUi(options) {
   this.swaggerData = null;
   //  默认false
-  this.springdoc = options.springdoc || false;
+  this.springdoc = options.springdoc || true;
   //  此处判断底层springfox版本
   //  1、springfox提供的分组地址/swagger-resources
   //  2、springdoc-open提供的分组地址：v3/api-docs/swagger-config
